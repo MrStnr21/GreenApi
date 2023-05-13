@@ -1,0 +1,59 @@
+.section {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  margin: 0;
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  background-color: #293145;
+  border-radius: 15px;
+  box-shadow: 0px 0px 35px 0px #000000;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin: 0 0 20px 0;
+  padding: 0;
+  font-size: 36px;
+}
+
+.auth {
+  margin: 0 0 20px 0;
+  padding: 0;
+  font-size: 24px;
+}
+
+.inputName {
+  margin: 0 0 10px 0;
+  padding: 0;
+  width: 300px;
+  font-size: 18px;
+}
+
+.input {
+  margin: 0 0 30px 0;
+  padding: 10px;
+  width: 300px;
+  height: 40px;
+  border: none;
+  color: #e9edef;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.input:focus {
+  overflow: hidden;
+  outline: 1px solid #aeaeae;
+}

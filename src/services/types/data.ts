@@ -18,3 +18,9 @@ export type TSendMessage = {
 export type TRoutesUrl = {
   readonly [name: string]: string;
 };
+
+//типизация хука useForm
+export type TFormStateType = {
+  idInstance?: string;
+  apiTokenInstance?: string;
+};

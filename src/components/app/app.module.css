@@ -4,6 +4,7 @@
   min-width: 748px;
   max-width: 1980px;
   width: 100%;
+  min-height: 748px;
   height: 100vh;
   display: flex;
   align-items: center;

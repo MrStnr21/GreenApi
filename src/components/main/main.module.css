@@ -4,9 +4,16 @@
   background-color: #293145;
   min-width: 748px;
   width: 70vw;
-  height: 95vh;
+  min-height: 748px;
+  height: 90vh;
   border-radius: 15px;
   box-shadow: 0px 0px 35px 0px #000000;
-  display: flex;
   position: relative;
+}
+
+.inteface {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: calc(100% - 70px);
 }

@@ -18,7 +18,6 @@ const ContactCard: FC<ICard> = ({
       <div className={stylesContactCard.avatarContainer}>
         <img className={stylesContactCard.avatar} src={avatar} alt="avatar" />
       </div>
-
       <h2 className={stylesContactCard.name}>{name}</h2>
     </div>
   );

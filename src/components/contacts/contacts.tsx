@@ -10,10 +10,6 @@ import { fakeContacts } from "../utils/data";
 const Contacts: FC = (): JSX.Element => {
   return (
     <section className={styleContacts.section}>
-      <div className={styleContacts.titleContainer}>
-        <h2 className={styleContacts.title}>Контакты</h2>
-        <Button text={"новый чат"} />
-      </div>
       <ul className={styleContacts.contactsContainer}>
         {fakeContacts.map((user) => {
           return (
