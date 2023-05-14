@@ -24,3 +24,9 @@ export type TFormStateType = {
   idInstance?: string;
   apiTokenInstance?: string;
 };
+
+//типизация данных пользователя
+export type TUser = {
+  id: string;
+  token: string;
+};

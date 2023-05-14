@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import stylesChat from "./chat.module.css";
 
-import { Message } from "../ui/message/maessage";
+import { Message } from "../ui/message/message";
 import { Button } from "../ui/button/button";
 
 const Chat: FC = (): JSX.Element => {
@@ -10,9 +10,6 @@ const Chat: FC = (): JSX.Element => {
     <section className={stylesChat.section}>
       <div className={stylesChat.messagesSection}>
         <ul className={stylesChat.messagesList}>
-          <Message type="send" />
-          <Message type="get" />
-          <Message type="send" />
           <Message type="send" />
           <Message type="get" />
         </ul>

@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import stylesContactCard from "./contact-card.module.css";
 
-import avatarDefault from "../../../images/avatar_default.png";
+import avatarDefault from "../../../images/fake-avatar/avatar_default.png";
 
 interface ICard {
   avatar?: string;

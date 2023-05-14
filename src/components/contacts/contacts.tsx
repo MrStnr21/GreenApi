@@ -2,7 +2,6 @@ import { FC } from "react";
 
 import styleContacts from "./contacts.module.css";
 
-import { Button } from "../ui/button/button";
 import { ContactCard } from "../ui/contact-card/contact-card";
 
 import { fakeContacts } from "../utils/data";

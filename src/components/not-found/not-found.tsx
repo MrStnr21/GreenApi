@@ -5,6 +5,7 @@ import { NavigateFunction, useNavigate } from "react-router-dom";
 import stylesNotFound from "./not-found.module.css";
 
 import { routesUrl } from "../utils/routes-data";
+
 import { Button } from "../ui/button/button";
 
 const NotFound: FC = () => {
