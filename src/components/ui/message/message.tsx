@@ -3,33 +3,44 @@ import { FC } from "react";
 import stylesMessage from "./message.module.css";
 
 interface IMessage {
+  key?: string;
   text?: string;
   type: string;
+  date: any;
 }
 
-const Message: FC<IMessage> = ({
-  type,
-  text = "Lorem Epsum Lorem Epsum Lorem Epsum Lorem Epsum Lorem Epsum",
-}) => {
+const Message: FC<IMessage> = ({ key, type, text, date }) => {
   const colorMes =
-    type === "send"
+    type === "outgoing"
       ? stylesMessage.sendMessageColor
-      : type === "get"
+      : type === "incoming"
       ? stylesMessage.getMessageColor
       : null;
 
   const posMes =
-    type === "send"
+    type === "outgoing"
       ? stylesMessage.sendMessagePos
-      : type === "get"
+      : type === "incoming"
       ? stylesMessage.getMessagePos
       : null;
 
+  let time: string | null = null;
+
+  const timeConverter = (timestamps: any) => {
+    const currentDate = new Date(timestamps * 1000);
+    time = currentDate.toLocaleTimeString("it-IT");
+    return time;
+  };
+
+  timeConverter(date);
+
+  console.log(date);
+
   return (
-    <li className={`${stylesMessage.messagesItem} ${posMes}`}>
+    <li key={key} className={`${stylesMessage.messagesItem} ${posMes}`}>
       <div className={`${stylesMessage.message} ${colorMes}`}>
         <p className={stylesMessage.textMessage}>{text}</p>
-        <span className={stylesMessage.time}>4:20</span>
+        <span className={stylesMessage.time}>{time!.slice(0, -3)}</span>
       </div>
     </li>
   );

@@ -7,9 +7,18 @@ interface IInputForm {
   id?: string;
   name?: string;
   placeholder?: string;
+  value?: string;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const InputForm: FC<IInputForm> = ({ type, id, name, placeholder }) => {
+const InputForm: FC<IInputForm> = ({
+  type,
+  id,
+  name,
+  placeholder,
+  value,
+  onChange,
+}) => {
   return (
     <input
       type={type}
@@ -17,6 +26,8 @@ const InputForm: FC<IInputForm> = ({ type, id, name, placeholder }) => {
       name={name}
       placeholder={placeholder}
       className={stylesInputForm.inputNumber}
+      value={value}
+      onChange={onChange}
     />
   );
 };

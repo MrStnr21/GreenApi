@@ -1,5 +1,5 @@
 import {
-  LOGIN_REQUSET,
+  LOGIN_REQUEST,
   LOGIN_SUCCESS,
   LOGIN_ERROR,
   LOGOUT,
@@ -30,7 +30,7 @@ function authorizationReducer(
 ) {
   switch (action.type) {
     //экшены авторизации
-    case LOGIN_REQUSET: {
+    case LOGIN_REQUEST: {
       return {
         ...state,
         loginRequest: true,

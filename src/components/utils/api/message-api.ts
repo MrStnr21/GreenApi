@@ -1,23 +1,20 @@
-import { BASE_URL } from "./data";
+import { BASE_URL } from "../data";
 
 import { request } from "./api";
 
-import { TSendMessage } from "../../services/types/data";
-
-const id = "1101819497";
-const apiTokenInstance = "37a28775610240d88714ded7d6a17a4b4a78d6b02c4a4626bf";
+import { TContact, TSendMessage, TUser } from "../../../services/types/data";
 
 //запрос на отправку текстовых сообщений
-function sendMessageApi(id: string, message: string) {
+function sendMessageApi(userInfo: TUser, contact: TContact, message: string) {
   return request<TSendMessage>(
-    `${BASE_URL}/waInstance${id}/SendMessage/${apiTokenInstance}`,
+    `${BASE_URL}/waInstance${userInfo.id}/SendMessage/${userInfo.token}`,
     {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
       },
       body: JSON.stringify({
-        chatId: id,
+        chatId: `${contact.number}@c.us`,
         message: message,
       }),
     }

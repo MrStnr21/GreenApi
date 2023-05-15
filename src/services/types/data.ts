@@ -14,6 +14,11 @@ export type TSendMessage = {
   message: string;
 };
 
+export type TGetChatHistory = {
+  chatId: string;
+  statusCode: number;
+};
+
 //типизация путей
 export type TRoutesUrl = {
   readonly [name: string]: string;
@@ -21,12 +26,29 @@ export type TRoutesUrl = {
 
 //типизация хука useForm
 export type TFormStateType = {
-  idInstance?: string;
-  apiTokenInstance?: string;
+  [name: string]: string;
 };
 
 //типизация данных пользователя
 export type TUser = {
   id: string;
   token: string;
+};
+
+//типизация добавляемого номера получателя
+export type TContact = {
+  number: string;
+};
+
+//типизация истории чата
+export type TChatHistory = {
+  chatId: string;
+  extendedTextMessage: { [name: string]: string };
+  idMessage: string;
+  sendByApi: true;
+  statusMessage: string;
+  textMessage: string;
+  timestamp: number;
+  type: string;
+  typeMessage: string;
 };

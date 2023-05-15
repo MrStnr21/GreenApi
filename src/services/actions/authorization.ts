@@ -1,14 +1,14 @@
 import { AppDispatch, AppThunk } from "../types";
 import { TUser } from "../types/data";
 
-const LOGIN_REQUSET = "LOGIN_REQUSET";
+const LOGIN_REQUEST = "LOGIN_REQUEST";
 const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 const LOGIN_ERROR = "LOGIN_ERROR";
 
 const LOGOUT = "LOGOUT";
 
 export interface ILoginRequestAction {
-  readonly type: typeof LOGIN_REQUSET;
+  readonly type: typeof LOGIN_REQUEST;
 }
 
 export interface ILoginSuccessAction {
@@ -34,7 +34,7 @@ export type TAuthorizationActions =
 const loginAction: AppThunk = (userInfo: TUser) => {
   return function (dispatch: AppDispatch) {
     dispatch({
-      type: LOGIN_REQUSET,
+      type: LOGIN_REQUEST,
     });
 
     dispatch({
@@ -42,9 +42,9 @@ const loginAction: AppThunk = (userInfo: TUser) => {
       user: userInfo,
     });
 
-    dispatch({
-      type: LOGIN_ERROR,
-    });
+    // dispatch({
+    //   type: LOGIN_ERROR,
+    // });
   };
 };
 
@@ -56,7 +56,7 @@ const logoutAction: AppThunk = () => {
 };
 
 export {
-  LOGIN_REQUSET,
+  LOGIN_REQUEST,
   LOGIN_SUCCESS,
   LOGIN_ERROR,
   LOGOUT,

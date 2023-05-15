@@ -18,4 +18,8 @@ const initialFormState: TFormStateType = {
   apiTokenInstance: "",
 };
 
-export { useForm, initialFormState };
+const initialContactState: TFormStateType = {
+  number: "",
+};
+
+export { useForm, initialFormState, initialContactState };

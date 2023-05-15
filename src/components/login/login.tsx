@@ -31,6 +31,8 @@ const Login: FC = (): JSX.Element => {
       setError(false);
 
       dispatch(loginAction(values));
+      //fake server authorization
+      localStorage.setItem("id", values.idInstance);
       localStorage.setItem("token", values.apiTokenInstance!);
     }
   };

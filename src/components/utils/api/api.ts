@@ -1,4 +1,4 @@
-import { IResponse, TOptions } from "../../services/types/data";
+import { IResponse, TOptions } from "../../../services/types/data";
 
 //шаблон запроса
 function checkRes<T>(res: IResponse<T>): Promise<T> | Promise<never> {
