@@ -1,46 +1,57 @@
-# Getting Started with Create React App
+# Green Api 
+### *Тестовое задание от [Green Api](https://green-api.com/)*
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Описание проекта
+Вэб-приложение чата. 
+Здесь пользователь может пройти авторизоваться на сайте, добавить новый контакт и вести с ним переписку.
 
-## Available Scripts
+## Функционал:
+- Авторизация;
+- Отправка сообщений;
+- Отрисовка полученных сообщений;
 
-In the project directory, you can run:
+## Стек технологий:
+- TypeScript;
+- React + Redux;
+- JS;
+- API;
+- CSS;
+- HTML.
 
-### `npm start`
+## Установка и запуск проекта:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Клонировать репозиторий:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+    git clone https://github.com/MrStnr21/GreenApi.git
 
-### `npm test`
+Установить зависимости:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    npm install
 
-### `npm run build`
+Собрать проект:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    npm run build
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Запустить проект:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    npm run start
 
-### `npm run eject`
+## ТЗ:
+1. Требуется разработать пользовательский интерфейс для отправки и получений сообщений WhatsApp
+2. Требуется использовать сервис GREEN-API https://green-api.com/
+3. Требуется реализовать отправку и получение только текстовых сообщений
+4. Требуется за прототип интерфейса взять внешний вид чата
+https://web.whatsapp.com/
+5. Требуется реализовать интерфейс максимально простым с минимальным набором функций
+6. Требуется отправку сообщений реализовать методом https://green- api.com/docs/api/sending/SendMessage/
+7. Требуется получение сообщений реализовать методом https://green- api.com/docs/api/receiving/technology-http-api/
+8. Требуется использовать технологию React
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Скриншоты:
+<details><summary><b>Развернуть</b></summary>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+</details>
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Ссылка на сайт: [GreenApiTest](https://greenapitest.netlify.app)
