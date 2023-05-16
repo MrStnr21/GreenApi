@@ -28,7 +28,6 @@ function addContactReducer(
   action: TAddContactActions
 ) {
   switch (action.type) {
-    //экшены добавления номера получателя
     case ADD_CONTACT_REQUEST: {
       return {
         ...state,

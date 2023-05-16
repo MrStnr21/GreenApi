@@ -12,11 +12,22 @@ export type TOptions = {
 export type TSendMessage = {
   chatId: string;
   message: string;
+  idMessage: string;
+  statusCode: number;
 };
 
 export type TGetChatHistory = {
   chatId: string;
   statusCode: number;
+};
+
+export type TGetNotification = {
+  receiptId: number;
+  statusCode: number;
+};
+
+export type TDelNotification = {
+  result: boolean;
 };
 
 //типизация путей
@@ -52,3 +63,24 @@ export type TChatHistory = {
   type: string;
   typeMessage: string;
 };
+
+//типизация уведомления
+export type TGetNotif = {
+  receiptId: number;
+  body: {
+    typeWebhook: string;
+    chatId: string;
+    instanceData: {
+      idInstance: number;
+      wid: string;
+      typeInstance: string;
+    };
+    timestamp: number;
+    idMessage: string;
+    status: string;
+    sendByApi: boolean;
+  };
+};
+
+//типизация контактов
+export type TContacts = { id: number; name: string; avatar?: string };

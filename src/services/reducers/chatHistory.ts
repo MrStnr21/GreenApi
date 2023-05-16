@@ -27,7 +27,6 @@ function getChatHistoryReducer(
   state = chatHistoryInitialState,
   action: TChatHistoryActions
 ) {
-  //экшены истории чата
   switch (action.type) {
     case CHAT_HISTORY_REQUEST: {
       return {

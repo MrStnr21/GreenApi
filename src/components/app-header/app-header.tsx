@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from "react";
+import { FC, useState } from "react";
 
 import { useNavigate } from "react-router-dom";
 
@@ -12,9 +12,11 @@ import { Button } from "../ui/button/button";
 
 import { useAppDispatch } from "../../services/hooks/hooks";
 import { useForm, initialContactState } from "../../services/hooks/useForm";
+
 import { logoutAction } from "../../services/actions/authorization";
 import { addContactAction } from "../../services/actions/contacts";
 import { getHistoryChatAction } from "../../services/actions/chatHistory";
+
 import { TFormStateType, TUser } from "../../services/types/data";
 
 const AppHeader: FC = (): JSX.Element => {
@@ -49,7 +51,7 @@ const AppHeader: FC = (): JSX.Element => {
 
     setValues({ number: "" });
 
-    dispatch(getHistoryChatAction(user, contactNum!));
+    dispatch(getHistoryChatAction(user, contactNum));
   };
 
   const handleCloseModal = () => setOpenModal(false);

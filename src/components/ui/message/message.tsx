@@ -3,13 +3,12 @@ import { FC } from "react";
 import stylesMessage from "./message.module.css";
 
 interface IMessage {
-  key?: string;
-  text?: string;
+  text: string;
   type: string;
-  date: any;
+  date: number;
 }
 
-const Message: FC<IMessage> = ({ key, type, text, date }) => {
+const Message: FC<IMessage> = ({ type, text, date }) => {
   const colorMes =
     type === "outgoing"
       ? stylesMessage.sendMessageColor
@@ -26,7 +25,7 @@ const Message: FC<IMessage> = ({ key, type, text, date }) => {
 
   let time: string | null = null;
 
-  const timeConverter = (timestamps: any) => {
+  const timeConverter = (timestamps: number) => {
     const currentDate = new Date(timestamps * 1000);
     time = currentDate.toLocaleTimeString("it-IT");
     return time;
@@ -34,15 +33,13 @@ const Message: FC<IMessage> = ({ key, type, text, date }) => {
 
   timeConverter(date);
 
-  console.log(date);
-
   return (
-    <li key={key} className={`${stylesMessage.messagesItem} ${posMes}`}>
+    <div className={`${stylesMessage.messagesItem} ${posMes}`}>
       <div className={`${stylesMessage.message} ${colorMes}`}>
         <p className={stylesMessage.textMessage}>{text}</p>
         <span className={stylesMessage.time}>{time!.slice(0, -3)}</span>
       </div>
-    </li>
+    </div>
   );
 };
 

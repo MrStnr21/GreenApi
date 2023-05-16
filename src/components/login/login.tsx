@@ -4,7 +4,6 @@ import { useNavigate, NavigateFunction } from "react-router-dom";
 import stylesLogin from "./login.module.css";
 
 import { Button } from "../ui/button/button";
-import { Loader } from "../ui/loader/loader";
 
 import { useForm, initialFormState } from "../../services/hooks/useForm";
 import { TFormStateType } from "../../services/types/data";
@@ -18,7 +17,7 @@ const Login: FC = (): JSX.Element => {
   const navigate: NavigateFunction = useNavigate();
   const dispatch = useAppDispatch();
   const [error, setError] = useState<boolean>(false);
-  const { loginRequest, loginSuccess } = useAppSelector(authSel);
+  const { loginSuccess } = useAppSelector(authSel);
 
   const { values, handleChange } = useForm<TFormStateType>(initialFormState);
 
@@ -75,7 +74,6 @@ const Login: FC = (): JSX.Element => {
         />
         <Button text="войти" type="submit" onClick={handleSubmitLogin} />
       </div>
-      {loginRequest ? <Loader /> : null}
     </section>
   );
 };

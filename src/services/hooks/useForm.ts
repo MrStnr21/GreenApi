@@ -5,7 +5,9 @@ import { TFormStateType } from "../types/data";
 function useForm<T>(inputValues: T) {
   const [values, setValues] = useState<T>(inputValues);
 
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (
+    event: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>
+  ) => {
     const { value, name } = event.target;
     setValues({ ...values, [name]: value });
   };
@@ -22,4 +24,13 @@ const initialContactState: TFormStateType = {
   number: "",
 };
 
-export { useForm, initialFormState, initialContactState };
+const initialSendMessageState: TFormStateType = {
+  message: "",
+};
+
+export {
+  useForm,
+  initialFormState,
+  initialContactState,
+  initialSendMessageState,
+};

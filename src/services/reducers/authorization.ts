@@ -29,7 +29,6 @@ function authorizationReducer(
   action: TAuthorizationActions
 ) {
   switch (action.type) {
-    //экшены авторизации
     case LOGIN_REQUEST: {
       return {
         ...state,

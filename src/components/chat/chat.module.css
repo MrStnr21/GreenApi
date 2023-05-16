@@ -60,3 +60,8 @@
   overflow: hidden;
   outline: none;
 }
+
+.messagesItem {
+  margin: 0;
+  padding: 0;
+}

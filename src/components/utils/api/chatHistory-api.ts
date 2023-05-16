@@ -1,4 +1,5 @@
 import { TContact, TGetChatHistory, TUser } from "../../../services/types/data";
+
 import { BASE_URL } from "../data";
 
 import { request } from "./api";

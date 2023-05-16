@@ -6,16 +6,25 @@ import { store } from "../store";
 
 import { TAuthorizationActions } from "../actions/authorization";
 import { TAddContactActions } from "../actions/contacts";
+import { TChatHistoryActions } from "../actions/chatHistory";
+import { TSendMessageActions } from "../actions/sendMessage";
+import { TGetNotificationActions } from "../actions/getNotification";
+import { TDelNotificationActions } from "../actions/delNotification";
 
 import { TAuthState } from "../reducers/authorization";
 import { TContactsState } from "../reducers/contacts";
-import { TChatHistoryActions } from "../actions/chatHistory";
+import { TSendMessageState } from "../reducers/sendMessage";
 import { TChatHistoryState } from "../reducers/chatHistory";
+import { TGetNotificationState } from "../reducers/getNotification";
+import { TDelNotificationState } from "../reducers/delNotification";
 
 export type TStore = {
   auth: TAuthState;
   contact: TContactsState;
   chat: TChatHistoryState;
+  sendMsg: TSendMessageState;
+  getNotif: TGetNotificationState;
+  delNotif: TDelNotificationState;
 };
 
 export type RootState = ReturnType<typeof store.getState>;
@@ -23,7 +32,10 @@ export type RootState = ReturnType<typeof store.getState>;
 export type TApplicationActions =
   | TAuthorizationActions
   | TAddContactActions
-  | TChatHistoryActions;
+  | TChatHistoryActions
+  | TSendMessageActions
+  | TGetNotificationActions
+  | TDelNotificationActions;
 
 export type AppThunk<TReturn = void> = ActionCreator<
   ThunkAction<TReturn, Action, RootState, TApplicationActions>

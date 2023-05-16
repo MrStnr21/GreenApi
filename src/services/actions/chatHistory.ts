@@ -1,4 +1,5 @@
 import { getChatHistory } from "../../components/utils/api/chatHistory-api";
+
 import { AppDispatch, AppThunk } from "../types";
 import { TUser, TContact, TGetChatHistory } from "../types/data";
 
