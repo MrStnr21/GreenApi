@@ -3,12 +3,13 @@
 
 ## Описание проекта
 Вэб-приложение чата. 
-Здесь пользователь может пройти авторизоваться на сайте, добавить новый контакт и вести с ним переписку.
+Здесь пользователь может авторизоваться на сайте, добавить новый контакт и вести с ним переписку.
 
 ## Функционал:
 - Авторизация;
 - Отправка сообщений;
 - Отрисовка полученных сообщений;
+- взаимодействие с сервером.
 
 ## Стек технологий:
 - TypeScript;
@@ -50,7 +51,10 @@ https://web.whatsapp.com/
 ## Скриншоты:
 <details><summary><b>Развернуть</b></summary>
 
-
+![login-page](https://github.com/MrStnr21/welbex/assets/104725482/9abd4bef-f814-4e33-9368-ecfec1a9f125)
+![main-page](https://github.com/MrStnr21/welbex/assets/104725482/10ee13c2-53a7-44ed-9aeb-9d470723b94f)
+![add-number](https://github.com/MrStnr21/welbex/assets/104725482/eb4ae6df-ae7d-4498-b523-690ed40e21ab)
+![chat](https://github.com/MrStnr21/welbex/assets/104725482/b6d0a99f-e255-4c0c-80b3-9eb20a9b7c1f)
 
 </details>
 
