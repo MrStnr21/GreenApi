@@ -1,0 +1,67 @@
+.section {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.messagesSection {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 90%;
+  background-image: linear-gradient(rgba(0, 0, 0, 40%), rgb(0 0 0 / 70%)),
+    url("../../images/background/background.jpg");
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.messagesList {
+  margin: 0;
+  padding: 0;
+  width: 95%;
+  height: 95%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column-reverse;
+  row-gap: 10px;
+  overflow-y: scroll;
+}
+
+.inputSection {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.inputMessage {
+  margin: 5px;
+  padding: 10px;
+  width: 80%;
+  height: 60%;
+  border: none;
+  color: #e9edef;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  resize: none;
+  font-size: 16px;
+  overflow: scroll;
+}
+
+.inputMessage:focus {
+  border: 0 none #fff;
+  overflow: hidden;
+  outline: none;
+}
+
+.messagesItem {
+  margin: 0;
+  padding: 0;
+}

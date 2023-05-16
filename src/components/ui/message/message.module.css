@@ -1,0 +1,47 @@
+.message {
+  margin: 0;
+  padding: 5px;
+  width: fit-content;
+  max-width: 600px;
+  border-radius: 5px;
+}
+
+.messagesItem {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.sendMessageColor {
+  background-color: #015c4b;
+  margin-left: 100px;
+}
+
+.getMessageColor {
+  background-color: #1f2c33;
+  margin-right: 100px;
+}
+
+.sendMessagePos {
+  justify-content: flex-end;
+}
+
+.getMessagePos {
+  justify-content: flex-start;
+}
+
+.textMessage {
+  margin: 0;
+  padding: 0;
+  max-width: 600px;
+  overflow-wrap: anywhere;
+}
+
+.time {
+  margin-top: 5px;
+  padding: 0;
+  opacity: 0.5;
+  font-size: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
