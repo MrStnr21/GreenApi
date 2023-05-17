@@ -34,7 +34,9 @@ const Chat: FC = (): JSX.Element => {
   //fake server contact
   const contactNum = { number: localStorage.getItem("newContact") };
 
-  const handleSendMessage = (evt: any) => {
+  const handleSendMessage = (
+    evt: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
     evt.preventDefault();
 
     if (values.message.length > 1) {

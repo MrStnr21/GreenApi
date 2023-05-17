@@ -21,7 +21,9 @@ const Login: FC = (): JSX.Element => {
 
   const { values, handleChange } = useForm<TFormStateType>(initialFormState);
 
-  const handleSubmitLogin = (evt: any) => {
+  const handleSubmitLogin = (
+    evt: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
     evt.preventDefault();
 
     if (values.idInstance!.length < 1 && values.apiTokenInstance!.length < 1) {

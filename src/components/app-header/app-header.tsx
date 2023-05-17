@@ -38,7 +38,9 @@ const AppHeader: FC = (): JSX.Element => {
     setOpenModal(true);
   };
 
-  const handleAddContact = async (evt: any) => {
+  const handleAddContact = async (
+    evt: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
     evt.preventDefault();
 
     dispatch(addContactAction(values));
@@ -56,7 +58,9 @@ const AppHeader: FC = (): JSX.Element => {
 
   const handleCloseModal = () => setOpenModal(false);
 
-  const handleLogout = (evt: any) => {
+  const handleLogout = (
+    evt: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
     evt.preventDefault();
 
     dispatch(logoutAction());
