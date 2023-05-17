@@ -1,7 +1,7 @@
 {
   "name": "greenapitest",
   "version": "0.1.0",
-  "homepage": "https://MrStnr21.github.io/GreenApi",
+  "homepage": "/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.0",
